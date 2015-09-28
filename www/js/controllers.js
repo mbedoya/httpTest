@@ -14,12 +14,14 @@ angular.module('starter.controllers', [])
   console.log("hi there!");
   
   var cedula = '32244446';
-  var urlServicio = "http://200.47.173.68:9081" + "/AntaresWebServices/interfaceAntares/validarME/" + cedula;
+  //var urlServicio = "http://200.47.173.68:9081" + "/AntaresWebServices/interfaceAntares/validarME/" + cedula;
+  var urlServicio = 'http://www.mocky.io/v2/5609be4b95e00c4703981266';
+
+  alert(urlServicio);
 
   $http.get(urlServicio).
       success(function(data, status, headers, config) {
-          console.log(data);
-          alert('success');
+          alert(data.nombre);          
       }).
       error(function(data, status, headers, config) {
           console.log('error');
